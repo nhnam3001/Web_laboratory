@@ -52,6 +52,25 @@ no code editing and no redeploy needed.
 Note that hiding the link is convenience, not security: the dashboard is still protected by
 the login above, so the password is what actually keeps it private.
 
+## Published demo (GitHub Pages)
+
+Pushing to `main` deploys the site to GitHub Pages, where it runs as a **demo**:
+there is no backend, so the database is baked into the build and each visitor gets
+their own editable copy in their browser.
+
+- Visitors can open the dashboard (Ctrl+A) and sign in with `admin` / `demo123`
+  — separate from the real password, and only valid in the demo.
+- Their edits are saved to their own browser storage. They never reach other
+  visitors, and they never change the published content.
+- A banner explains this and offers a "Reset demo" button that restores the
+  original content.
+
+To change what the demo starts from, edit content in the local dashboard and push:
+`server/data/db.json` and `server/uploads/` are what get baked into the build.
+
+To publish the site without the demo dashboard, remove the `/login` and
+`/dashboard` routes from `src/App.jsx` for demo builds.
+
 ## Configuration
 
 - `.env` (frontend) — `VITE_API_URL` points the frontend at the backend API.

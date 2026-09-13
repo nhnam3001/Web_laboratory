@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useSettings } from "../context/SettingsContext.jsx";
+import { IS_DEMO } from "../api/client.js";
+import { DEMO_CREDENTIALS } from "../api/demoStore.js";
 import "./Login.css";
 
 export default function Login() {
@@ -36,6 +38,14 @@ export default function Login() {
         <div className="login-mark">{(settings.shortName || "L").charAt(0)}</div>
         <h1>Administrator sign in</h1>
         <p className="login-sub">{settings.labName}</p>
+
+        {IS_DEMO && (
+          <div className="login-demo-hint">
+            Demo sign-in: <strong>{DEMO_CREDENTIALS.username}</strong> /{" "}
+            <strong>{DEMO_CREDENTIALS.password}</strong>
+            <span>Your changes stay in this browser only.</span>
+          </div>
+        )}
 
         {error && <div className="alert error">{error}</div>}
 
