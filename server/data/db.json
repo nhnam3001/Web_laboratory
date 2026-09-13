@@ -1,0 +1,249 @@
+{
+  "settings": {
+    "labName": "Biomedical Data Systems Lab",
+    "shortName": "BDS Lab",
+    "institution": "[Your University Name]",
+    "tagline": "Advancing biomedical data science through interdisciplinary research.",
+    "intro": "The Biomedical Data Systems Lab conducts research at the intersection of biomedical engineering, data science, and clinical informatics. Our mission is to develop computational methods that turn complex health data into actionable insight, in close collaboration with clinicians and industry partners.",
+    "researchOverview": "Our research spans several core areas of biomedical informatics, combining algorithm development with real-world clinical validation.",
+    "address": "[Department Name], [Building / Room Number], [University Address], [City, Country]",
+    "phone": "+1-000-000-0000",
+    "email": "lab-contact@example.edu",
+    "mapNote": "[Embed a campus map or directions here]",
+    "heroImageUrl": "",
+    "aboutImageUrl": ""
+  },
+  "members": [
+    {
+      "id": "gl-1",
+      "category": "group-leader",
+      "name": "Dr. Jane Doe",
+      "degree": "Ph.D.",
+      "photoUrl": "",
+      "position": "Assistant Professor, Department of Biomedical Engineering",
+      "affiliation": "[Your University Name]",
+      "secondaryRole": "Director, [Your Research Center Name]",
+      "phone": "+1-000-000-0000",
+      "fax": "+1-000-000-0001",
+      "email": "jane.doe@example.edu",
+      "website": "https://example.edu/~janedoe",
+      "education": [
+        {
+          "period": "2010",
+          "school": "[Graduate School Name]",
+          "degree": "Ph.D. in Biomedical Informatics"
+        },
+        {
+          "period": "2006",
+          "school": "[Graduate School Name]",
+          "degree": "M.S. in Computer Science"
+        },
+        {
+          "period": "2004",
+          "school": "[University Name]",
+          "degree": "B.S. in Electrical Engineering"
+        }
+      ],
+      "experience": [
+        {
+          "period": "2020 - Present",
+          "title": "Assistant Professor",
+          "org": "[Your University Name]"
+        },
+        {
+          "period": "2015 - 2020",
+          "title": "Senior Research Scientist",
+          "org": "[Research Institute Name]"
+        },
+        {
+          "period": "2010 - 2015",
+          "title": "Postdoctoral Fellow",
+          "org": "[University Name], [Country]"
+        }
+      ],
+      "researchFields": [
+        "Biomedical signal and image processing",
+        "Machine learning for clinical decision support",
+        "Health data interoperability"
+      ],
+      "academicActivities": [
+        "Member, [Professional Society Name] (2012 - Present)",
+        "Editorial Board Member, [Journal Name] (2018 - Present)",
+        "Program Committee, [Conference Name] (2016 - Present)"
+      ],
+      "phdThesis": "[Ph.D. Thesis Title Placeholder]",
+      "masterThesis": "[Master's Thesis Title Placeholder]",
+      "period": "",
+      "currentPosition": "",
+      "order": 1
+    },
+    {
+      "id": "al-1",
+      "category": "alumni",
+      "name": "Dr. John Smith",
+      "degree": "Ph.D.",
+      "photoUrl": "",
+      "position": "",
+      "affiliation": "",
+      "secondaryRole": "",
+      "phone": "",
+      "fax": "",
+      "email": "john.smith@example.com",
+      "website": "",
+      "education": [],
+      "experience": [],
+      "researchFields": [],
+      "academicActivities": [],
+      "phdThesis": "",
+      "masterThesis": "",
+      "period": "2016 - 2022",
+      "currentPosition": "Now at [Company / University Name]",
+      "order": 1
+    },
+    {
+      "id": "al-2",
+      "category": "alumni",
+      "name": "Emily Chen, M.S.",
+      "degree": "M.S.",
+      "photoUrl": "",
+      "position": "",
+      "affiliation": "",
+      "secondaryRole": "",
+      "phone": "",
+      "fax": "",
+      "email": "emily.chen@example.com",
+      "website": "",
+      "education": [],
+      "experience": [],
+      "researchFields": [],
+      "academicActivities": [],
+      "phdThesis": "",
+      "masterThesis": "",
+      "period": "2019 - 2021",
+      "currentPosition": "Now at [Company Name]",
+      "order": 2
+    },
+    {
+      "id": "vm-1",
+      "category": "visiting",
+      "name": "Prof. Michael Brown",
+      "degree": "Ph.D.",
+      "photoUrl": "",
+      "position": "Visiting Professor",
+      "affiliation": "[Home University Name]",
+      "secondaryRole": "",
+      "phone": "",
+      "fax": "",
+      "email": "michael.brown@example.edu",
+      "website": "",
+      "education": [],
+      "experience": [],
+      "researchFields": [],
+      "academicActivities": [],
+      "phdThesis": "",
+      "masterThesis": "",
+      "period": "2023 - 2024",
+      "currentPosition": "",
+      "order": 1
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "date": "2026-03-15",
+      "title": "[Placeholder] Paper accepted at [Conference Name] 2026",
+      "body": "Our work on [research topic] has been accepted for presentation at [Conference Name].",
+      "order": 1
+    },
+    {
+      "id": "news-2",
+      "date": "2026-01-10",
+      "title": "[Placeholder] Welcoming new graduate students",
+      "body": "We are happy to welcome [Number] new graduate students to the lab this semester.",
+      "order": 2
+    },
+    {
+      "id": "news-3",
+      "date": "2025-09-01",
+      "title": "[Placeholder] New research grant awarded",
+      "body": "The lab has been awarded funding from [Funding Agency Name] to support [project name].",
+      "order": 3
+    }
+  ],
+  "research": [
+    {
+      "id": "res-1",
+      "title": "Clinical Machine Learning",
+      "description": "Risk prediction, early-warning systems, and interpretable models for clinical decision support.",
+      "order": 1
+    },
+    {
+      "id": "res-2",
+      "title": "Medical Image Analysis",
+      "description": "Segmentation, registration, and quantitative analysis of radiology and pathology images.",
+      "order": 2
+    },
+    {
+      "id": "res-3",
+      "title": "Wearable & Physiological Signal Analysis",
+      "description": "Processing and modeling of ECG, EEG, and other continuous monitoring data streams.",
+      "order": 3
+    },
+    {
+      "id": "res-4",
+      "title": "Health Data Standards & Interoperability",
+      "description": "FHIR-based data pipelines and terminology mapping for multi-institution research.",
+      "order": 4
+    }
+  ],
+  "funding": [
+    {
+      "id": "fund-1",
+      "period": "2024 - 2027",
+      "title": "[Placeholder] Project title on clinical AI models",
+      "agency": "[Funding Agency Name]",
+      "role": "Principal Investigator",
+      "order": 1
+    },
+    {
+      "id": "fund-2",
+      "period": "2022 - 2024",
+      "title": "[Placeholder] Project title on medical imaging pipeline",
+      "agency": "[Funding Agency Name]",
+      "role": "Co-Investigator",
+      "order": 2
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-1",
+      "type": "international-conference",
+      "year": "2025",
+      "authors": "[Author list]",
+      "title": "[Placeholder paper title]",
+      "venue": "Proc. of [Conference Name], [Location]",
+      "link": "",
+      "order": 1
+    },
+    {
+      "id": "pub-2",
+      "type": "domestic-conference",
+      "year": "2024",
+      "authors": "[Author list]",
+      "title": "[Placeholder paper title]",
+      "venue": "[Domestic Conference Name]",
+      "link": "",
+      "order": 1
+    },
+    {
+      "id": "pub-3",
+      "type": "patents",
+      "year": "2023",
+      "authors": "[Inventor list]",
+      "title": "[Placeholder patent title]",
+      "venue": "[Country] Patent No. [XX-XXXXXXX]",
+      "link": "",
+      "order": 1
+    }
+  ]
+}
