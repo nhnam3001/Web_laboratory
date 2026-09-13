@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import PublicLayout from "./components/PublicLayout.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { useSecretDashboardShortcut } from "./hooks/useSecretDashboardShortcut.js";
+import { IS_STATIC } from "./api/client.js";
 
 import Home from "./pages/Home.jsx";
 import News from "./pages/News.jsx";
@@ -21,7 +22,8 @@ import CollectionAdmin from "./pages/dashboard/CollectionAdmin.jsx";
 import SettingsAdmin from "./pages/dashboard/SettingsAdmin.jsx";
 
 export default function App() {
-  useSecretDashboardShortcut();
+  // The published static build has no backend, so the dashboard is left out of it.
+  useSecretDashboardShortcut(!IS_STATIC);
 
   return (
     <Routes>
@@ -78,26 +80,33 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Route>
 
-      {/* Admin */}
-      <Route path="/login" element={<Login />} />
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <DashboardLayout />
-          </ProtectedRoute>
-        }
-      >
-        <Route index element={<Navigate to="/dashboard/members" replace />} />
-        <Route path="members" element={<MembersAdmin />} />
-        <Route path="members/new" element={<MemberForm />} />
-        <Route path="members/:id/edit" element={<MemberForm />} />
-        <Route path="news" element={<CollectionAdmin collection="news" />} />
-        <Route path="research" element={<CollectionAdmin collection="research" />} />
-        <Route path="funding" element={<CollectionAdmin collection="funding" />} />
-        <Route path="publications" element={<CollectionAdmin collection="publications" />} />
-        <Route path="settings" element={<SettingsAdmin />} />
-      </Route>
+      {/* Admin — only in builds that talk to the backend */}
+      {!IS_STATIC && (
+        <>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/dashboard/members" replace />} />
+            <Route path="members" element={<MembersAdmin />} />
+            <Route path="members/new" element={<MemberForm />} />
+            <Route path="members/:id/edit" element={<MemberForm />} />
+            <Route path="news" element={<CollectionAdmin collection="news" />} />
+            <Route path="research" element={<CollectionAdmin collection="research" />} />
+            <Route path="funding" element={<CollectionAdmin collection="funding" />} />
+            <Route
+              path="publications"
+              element={<CollectionAdmin collection="publications" />}
+            />
+            <Route path="settings" element={<SettingsAdmin />} />
+          </Route>
+        </>
+      )}
     </Routes>
   );
 }

@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 const EDITABLE_TAGS = new Set(["INPUT", "TEXTAREA", "SELECT"]);
 
-export function useSecretDashboardShortcut() {
+export function useSecretDashboardShortcut(enabled = true) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (!enabled) return;
+
     const handleKeyDown = (e) => {
       const isCtrlA = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "a";
       if (!isCtrlA) return;
@@ -22,5 +24,5 @@ export function useSecretDashboardShortcut() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [navigate]);
+  }, [navigate, enabled]);
 }

@@ -8,7 +8,7 @@ import { SettingsProvider } from './context/SettingsContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AuthProvider>
         <SettingsProvider>
           <App />
