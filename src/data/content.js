@@ -17,8 +17,10 @@ export const NAV_ITEMS = [
   },
   {
     label: "Publications",
-    to: "/publications/international-conference",
+    to: "/publications/international-journal",
     children: [
+      { label: "International Journal", to: "/publications/international-journal" },
+      { label: "Domestic Journal", to: "/publications/domestic-journal" },
       { label: "International Conference", to: "/publications/international-conference" },
       { label: "Domestic Conference", to: "/publications/domestic-conference" },
       { label: "Patents", to: "/publications/patents" },
@@ -28,6 +30,8 @@ export const NAV_ITEMS = [
 ];
 
 export const PUBLICATION_TYPES = [
+  { value: "international-journal", label: "International Journal" },
+  { value: "domestic-journal", label: "Domestic Journal" },
   { value: "international-conference", label: "International Conference" },
   { value: "domestic-conference", label: "Domestic Conference" },
   { value: "patents", label: "Patents" },

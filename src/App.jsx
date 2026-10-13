@@ -57,6 +57,15 @@ export default function App() {
           }
         />
 
+        <Route path="/publications" element={<Navigate to="/publications/international-journal" replace />} />
+        <Route
+          path="/publications/international-journal"
+          element={<PublicationsPage type="international-journal" title="International Journal" />}
+        />
+        <Route
+          path="/publications/domestic-journal"
+          element={<PublicationsPage type="domestic-journal" title="Domestic Journal" />}
+        />
         <Route
           path="/publications/international-conference"
           element={
